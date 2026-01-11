@@ -1,5 +1,6 @@
 local s = Instance.new("Sound" )
 s.Name = "Sound"
 s.Parent = game.Workspace
-s.SoundId = "rbxassetid://93646173728502"
+s.SoundId = "rbxassetid://114366190424902"
 s:Play()
+
