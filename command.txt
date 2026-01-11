@@ -1,1 +1,5 @@
-print("Hello")
+local s = Instance.new("Sound" )
+s.Name = "Sound"
+s.Parent = game.Workspace
+s.SoundId = "rbxassetid://93646173728502"
+s:Play()
