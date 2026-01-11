@@ -1,1 +1,1 @@
-for _, p in pairs(game.Players:GetPlayers()) do p:Kick("Сервер закрыт на обслуживание") end
+print("Hello")
