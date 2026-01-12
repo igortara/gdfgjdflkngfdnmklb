@@ -1,27 +1,17 @@
-local RunService = game:GetService("RunService")
-local Players = game:GetService("Players")
 
--- Проверяем, запущен ли скрипт в реальной игре
-if not RunService:IsStudio() then
-    
-    local player = Players.LocalPlayer
-    local playerGui = player:WaitForChild("PlayerGui")
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
 
     -- Создаем ScreenGui
-    local screenGui = Instance.new("ScreenGui")
-    screenGui.Name = "FullRedScreen"
-    screenGui.IgnoreGuiInset = true -- Чтобы закрыть даже верхнюю панель Roblox
-    screenGui.DisplayOrder = 999 -- Поверх всех остальных элементов
-    screenGui.Parent = playerGui
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "FullRedScreen"
+screenGui.IgnoreGuiInset = true -- Чтобы закрыть даже верхнюю панель Roblox
+screenGui.DisplayOrder = 999 -- Поверх всех остальных элементов
+screenGui.Parent = playerGui
 
     -- Создаем красный Frame
-    local frame = Instance.new("Frame")
-    frame.Size = UDim2.new(1, 0, 1, 0) -- Растягиваем на весь экран
-    frame.BackgroundColor3 = Color3.new(1, 0, 0) -- Чистый красный цвет
-    frame.BorderSizePixel = 0
-    frame.Parent = screenGui
-
-    print("Обнаружена реальная игра. Экран окрашен в красный.")
-else
-    print("Это Roblox Studio. Красный экран не активирован.")
-end
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(1, 0, 1, 0) -- Растягиваем на весь экран
+frame.BackgroundColor3 = Color3.new(1, 0, 0) -- Чистый красный цвет
+frame.BorderSizePixel = 0
+frame.Parent = screenGui
